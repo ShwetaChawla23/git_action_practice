@@ -1,0 +1,17 @@
+name: Self Hosted Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Show message
+        shell: pwsh
+        run: |
+          Write-Host "=============================="
+          Write-Host "     GITHUB ACTIONS RUNNING"
+          Write-Host "=============================="
+          Write-Host "Self-hosted runner is working!"
